@@ -1,0 +1,401 @@
+:root {
+  font-family: "Inter", system-ui, sans-serif;
+  color: #1a1a1a;
+  background-color: #f5f6fb;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f5f6fb;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 24px 48px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.header__brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header__logo {
+  width: 48px;
+  height: 48px;
+  background: #1d75f2;
+  color: #fff;
+  font-weight: 700;
+  font-size: 22px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+}
+
+.header__brand-title {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.header__brand-subtitle {
+  color: #65739b;
+  font-size: 14px;
+}
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icon-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  border: none;
+  background: #fff;
+  box-shadow: 0 12px 20px rgba(30, 40, 90, 0.08);
+  cursor: pointer;
+}
+
+.cta-button {
+  border: none;
+  border-radius: 12px;
+  padding: 12px 18px;
+  background: #3f5bd8;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 24px;
+}
+
+.dashboard__left,
+.dashboard__right {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.summary-card {
+  background: #fff;
+  padding: 24px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 20px 40px rgba(30, 40, 90, 0.08);
+}
+
+.summary-card__label {
+  color: #65739b;
+  font-size: 14px;
+}
+
+.summary-card__value {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 8px 0;
+}
+
+.summary-card__meta {
+  font-size: 14px;
+  color: #65739b;
+}
+
+.summary-card__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.primary-button {
+  border: none;
+  border-radius: 14px;
+  padding: 10px 18px;
+  background: #3f5bd8;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.payments-due,
+.investor-performance,
+.accounts-list,
+.interest-calculator,
+.transaction-table {
+  background: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(30, 40, 90, 0.08);
+}
+
+.payments-due__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.link-button {
+  border: none;
+  background: transparent;
+  color: #3f5bd8;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.payments-due__list {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.payments-due__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  background: #f2f4ff;
+  padding: 12px;
+  border-radius: 16px;
+}
+
+.payments-due__item img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.payments-due__amount {
+  font-weight: 700;
+  color: #cc2b2b;
+}
+
+.investor-performance__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.investor-performance__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.investor-performance__profile {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.investor-performance__profile img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.investor-performance__stats {
+  text-align: right;
+}
+
+.accounts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.accounts-list__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accounts-list__profile {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.accounts-list__profile img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.outline-button {
+  border: 1px solid #c7d0f0;
+  color: #3f5bd8;
+  background: transparent;
+  border-radius: 14px;
+  padding: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 12px;
+}
+
+.section-title h2 {
+  font-size: 20px;
+}
+
+.section-title p {
+  font-size: 14px;
+  color: #65739b;
+}
+
+.section-title.compact h3 {
+  font-size: 18px;
+}
+
+.interest-calculator {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.interest-calculator__summary {
+  display: flex;
+  justify-content: space-between;
+  background: #f5f6fb;
+  padding: 16px;
+  border-radius: 16px;
+  margin-bottom: 8px;
+}
+
+.interest-calculator label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+  color: #516086;
+}
+
+.interest-calculator input,
+.interest-calculator select {
+  border-radius: 12px;
+  border: 1px solid #e1e5f2;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+.transactions {
+  margin-top: 32px;
+}
+
+.transaction-table {
+  display: grid;
+  gap: 12px;
+}
+
+.transaction-table__header,
+.transaction-table__row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  align-items: center;
+  gap: 12px;
+}
+
+.transaction-table__header {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #65739b;
+}
+
+.transaction-table__row {
+  background: #f8f9ff;
+  padding: 12px;
+  border-radius: 14px;
+}
+
+.transaction-table__account {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.transaction-table__account img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.pill {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  text-transform: capitalize;
+  width: fit-content;
+}
+
+.pill.given {
+  background: #dceeff;
+  color: #1d75f2;
+}
+
+.pill.taken {
+  background: #ffe7e7;
+  color: #d33f3f;
+}
+
+@media (max-width: 1024px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .summary-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .header__actions {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .payments-due__list {
+    flex-wrap: wrap;
+  }
+
+  .transaction-table__header,
+  .transaction-table__row {
+    grid-template-columns: 1fr;
+  }
+}
