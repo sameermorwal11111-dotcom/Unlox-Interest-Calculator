@@ -1,0 +1,79 @@
+{
+  "accounts": [
+    {
+      "id": "acc-1",
+      "name": "Suresh Prabha",
+      "role": "Investor",
+      "phone": "+91 9876543210",
+      "address": "13/D, Street",
+      "avatar": "https://i.pravatar.cc/100?img=12"
+    },
+    {
+      "id": "acc-2",
+      "name": "Jagrati Thakur",
+      "role": "Investor",
+      "phone": "+91 9876543211",
+      "address": "13/D, Street",
+      "avatar": "https://i.pravatar.cc/100?img=32"
+    },
+    {
+      "id": "acc-3",
+      "name": "Shiva",
+      "role": "Customer",
+      "phone": "+91 9876543212",
+      "address": "13/D, Street",
+      "avatar": "https://i.pravatar.cc/100?img=15"
+    }
+  ],
+  "transactions": [
+    {
+      "id": "txn-1",
+      "accountId": "acc-1",
+      "type": "given",
+      "amount": 200000,
+      "interestRate": 1.5,
+      "interestType": "simple",
+      "frequency": "monthly",
+      "date": "2024-07-03",
+      "notes": "Short term lending"
+    },
+    {
+      "id": "txn-2",
+      "accountId": "acc-2",
+      "type": "given",
+      "amount": 100000,
+      "interestRate": 3,
+      "interestType": "simple",
+      "frequency": "monthly",
+      "date": "2024-07-03",
+      "notes": "Investment tranche"
+    },
+    {
+      "id": "txn-3",
+      "accountId": "acc-3",
+      "type": "taken",
+      "amount": 100000,
+      "interestRate": 2,
+      "interestType": "compound",
+      "frequency": "monthly",
+      "date": "2024-07-03",
+      "notes": "Working capital"
+    }
+  ],
+  "reminders": [
+    {
+      "id": "rem-1",
+      "accountId": "acc-1",
+      "dueDate": "2024-07-21",
+      "amount": 4000,
+      "status": "today"
+    },
+    {
+      "id": "rem-2",
+      "accountId": "acc-2",
+      "dueDate": "2024-07-22",
+      "amount": 2400,
+      "status": "tomorrow"
+    }
+  ]
+}
