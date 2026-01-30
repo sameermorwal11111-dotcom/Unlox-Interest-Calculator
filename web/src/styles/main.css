@@ -1,7 +1,7 @@
 :root {
   font-family: "Inter", system-ui, sans-serif;
   color: #1a1a1a;
-  background-color: #f5f6fb;
+  background-color: #edf0f5;
 }
 
 * {
@@ -11,391 +11,201 @@
 }
 
 body {
-  background-color: #f5f6fb;
+  background-color: #edf0f5;
 }
 
 .app {
-  max-width: 1200px;
+  max-width: 980px;
   margin: 0 auto;
-  padding: 32px 24px 48px;
+  padding: 32px 20px 64px;
 }
 
-.header {
+.page {
+  background: #fff;
+  border-radius: 18px;
+  padding: 32px 40px 48px;
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.1);
+  border: 1px solid #e4e8f3;
+  position: relative;
+}
+
+.page::before,
+.page::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #1d75f2;
+}
+
+.page::before {
+  top: 72px;
+}
+
+.page::after {
+  bottom: 32px;
+  opacity: 0.4;
+}
+
+.page__header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  margin-bottom: 32px;
+  align-items: center;
+  padding-bottom: 28px;
+  border-bottom: 1px solid #e1e5f0;
+  margin-bottom: 24px;
 }
 
-.header__brand {
+.brand {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
 }
 
-.header__logo {
-  width: 48px;
-  height: 48px;
+.brand__logo {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
   background: #1d75f2;
   color: #fff;
   font-weight: 700;
-  font-size: 22px;
-  border-radius: 12px;
+  font-size: 20px;
   display: grid;
   place-items: center;
 }
 
-.header__brand-title {
+.brand__title {
   font-weight: 700;
   letter-spacing: 1px;
 }
 
-.header__brand-subtitle {
+.brand__subtitle {
   color: #65739b;
-  font-size: 14px;
+  font-size: 13px;
 }
 
-.header__actions {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+.section {
+  margin-bottom: 24px;
 }
 
-.icon-button {
-  width: 40px;
-  height: 40px;
-  border-radius: 12px;
-  border: none;
-  background: #fff;
-  box-shadow: 0 12px 20px rgba(30, 40, 90, 0.08);
-  cursor: pointer;
-}
-
-.cta-button {
-  border: none;
-  border-radius: 12px;
-  padding: 12px 18px;
-  background: #3f5bd8;
-  color: #fff;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.dashboard {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 24px;
-}
-
-.dashboard__left,
-.dashboard__right {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-.summary-card {
-  background: #fff;
-  padding: 24px;
-  border-radius: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
-  box-shadow: 0 20px 40px rgba(30, 40, 90, 0.08);
-}
-
-.summary-card__label {
-  color: #65739b;
-  font-size: 14px;
-}
-
-.summary-card__value {
-  font-size: 28px;
-  font-weight: 700;
-  margin: 8px 0;
-}
-
-.summary-card__meta {
-  font-size: 14px;
-  color: #65739b;
-}
-
-.summary-card__actions {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  align-items: flex-start;
-}
-
-.primary-button {
-  border: none;
-  border-radius: 14px;
-  padding: 10px 18px;
-  background: #3f5bd8;
-  color: #fff;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.payments-due,
-.investor-performance,
-.accounts-list,
-.interest-calculator,
-.transaction-table {
-  background: #fff;
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow: 0 20px 40px rgba(30, 40, 90, 0.08);
-}
-
-.payments-due__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.section h1 {
+  font-size: 26px;
   margin-bottom: 16px;
 }
 
-.link-button {
-  border: none;
-  background: transparent;
-  color: #3f5bd8;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.payments-due__list {
-  display: flex;
-  gap: 16px;
-  margin-bottom: 16px;
-}
-
-.payments-due__item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  background: #f2f4ff;
-  padding: 12px;
-  border-radius: 16px;
-}
-
-.payments-due__item img {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.payments-due__amount {
-  font-weight: 700;
-  color: #cc2b2b;
-}
-
-.investor-performance__list {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.investor-performance__item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.investor-performance__profile {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-}
-
-.investor-performance__profile img {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.investor-performance__stats {
-  text-align: right;
-}
-
-.accounts-list {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.accounts-list__item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.accounts-list__profile {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-}
-
-.accounts-list__profile img {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.outline-button {
-  border: 1px solid #c7d0f0;
-  color: #3f5bd8;
-  background: transparent;
-  border-radius: 14px;
-  padding: 10px;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.section-title {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+.section h2 {
+  font-size: 18px;
   margin-bottom: 12px;
 }
 
-.section-title h2 {
-  font-size: 20px;
+.section p {
+  color: #3f475a;
+  line-height: 1.6;
+  font-size: 15px;
 }
 
-.section-title p {
-  font-size: 14px;
-  color: #65739b;
-}
-
-.section-title.compact h3 {
-  font-size: 18px;
-}
-
-.interest-calculator {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.interest-calculator__summary {
-  display: flex;
-  justify-content: space-between;
-  background: #f5f6fb;
-  padding: 16px;
-  border-radius: 16px;
-  margin-bottom: 8px;
-}
-
-.interest-calculator label {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  font-size: 14px;
-  color: #516086;
-}
-
-.interest-calculator input,
-.interest-calculator select {
-  border-radius: 12px;
-  border: 1px solid #e1e5f2;
-  padding: 10px 12px;
-  font-size: 14px;
-}
-
-.transactions {
-  margin-top: 32px;
-}
-
-.transaction-table {
+.feature-list {
+  list-style: decimal;
+  padding-left: 18px;
   display: grid;
-  gap: 12px;
+  gap: 14px;
+  color: #3f475a;
 }
 
-.transaction-table__header,
-.transaction-table__row {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
-  align-items: center;
-  gap: 12px;
+.feature-list li {
+  line-height: 1.6;
 }
 
-.transaction-table__header {
-  font-size: 12px;
-  text-transform: uppercase;
-  color: #65739b;
+.feature-title {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 4px;
 }
 
-.transaction-table__row {
-  background: #f8f9ff;
-  padding: 12px;
-  border-radius: 14px;
+.feature-description {
+  display: block;
 }
 
-.transaction-table__account {
+.pill-list {
+  list-style: none;
   display: flex;
-  gap: 12px;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-.transaction-table__account img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.pill {
-  padding: 4px 10px;
+.pill-list li {
+  background: #f1f4ff;
+  color: #1d3a7a;
+  padding: 8px 14px;
   border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.table {
+  border: 1px solid #dde3f1;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.table__row {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 12px 16px;
+  border-bottom: 1px solid #edf0f7;
+  font-size: 14px;
+  color: #3f475a;
+}
+
+.table__row:last-child {
+  border-bottom: none;
+}
+
+.table__row--head {
+  background: #1d75f2;
+  color: #fff;
+  font-weight: 600;
+}
+
+.deliverables {
+  padding-left: 18px;
+  color: #3f475a;
+  display: grid;
+  gap: 10px;
+}
+
+.page__footer {
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid #e1e5f0;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   font-size: 12px;
-  text-transform: capitalize;
-  width: fit-content;
+  color: #5a647a;
 }
 
-.pill.given {
-  background: #dceeff;
-  color: #1d75f2;
-}
-
-.pill.taken {
-  background: #ffe7e7;
-  color: #d33f3f;
-}
-
-@media (max-width: 1024px) {
-  .dashboard {
-    grid-template-columns: 1fr;
-  }
-
-  .summary-card {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+.footer__title {
+  font-weight: 600;
+  margin-bottom: 6px;
 }
 
 @media (max-width: 768px) {
-  .header {
-    flex-direction: column;
-    gap: 16px;
-    align-items: flex-start;
+  .page {
+    padding: 28px 22px 40px;
   }
 
-  .header__actions {
-    width: 100%;
-    flex-wrap: wrap;
+  .page::before {
+    top: 88px;
   }
 
-  .payments-due__list {
-    flex-wrap: wrap;
+  .section h1 {
+    font-size: 22px;
   }
 
-  .transaction-table__header,
-  .transaction-table__row {
+  .table__row {
     grid-template-columns: 1fr;
+    gap: 6px;
   }
 }
